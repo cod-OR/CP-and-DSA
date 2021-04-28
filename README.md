@@ -1,4 +1,4 @@
-# Data-Structures-and-Algorithms
+# Data-Structures-and-Algorithms And CP
 
 Hi,
 I started my Competitive programming journey in January 2020. 

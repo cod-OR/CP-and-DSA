@@ -40,7 +40,7 @@ bool comp(ll a,ll b){
 ll n,k,tt=1;
 void solve(){
     //string s,t;
-    // ll m,q,x,y;
+    // ll m,q,x,y,ans=0;
     cin>>n; 
     std::vector<ll> ar(n);
     input(ar,n);

@@ -1,11 +1,7 @@
 # Data-Structures-and-Algorithms And CP
 
-Hi,
-I started my Competitive programming journey in January 2020. 
-Since then I have come across many methods and algorithms as well as some time-saving-techniques.
-I intend to gather as much of them as possible in this repository for my use and, of course, for the community.  <br>
-All contributions and comments are welcome.
-
+This repository contains all of my competitive programming templates.
+Any suggestions and comments are welcome.
 
 My Profiles -
 <br>

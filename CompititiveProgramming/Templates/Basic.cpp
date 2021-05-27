@@ -14,7 +14,7 @@ using namespace std;
 #define fast            ios_base::sync_with_stdio(false);cin.tie(0);
 #define all(x)          (x).begin(),(x).end()
 #define rep(i,a,b)      for(ll i=a;i<b;i++)
-#define PR(x)           cout << #x " = " << (x) << "\n"
+#define pr(x)           cout << #x " = " << (x) << "\n"
 #define mp              make_pair
 #define ff              first
 #define ss              second
@@ -25,7 +25,7 @@ using namespace std;
 
 const long long INF=1e18;
 const long long A=200005;
-const long long mod=1000000007;
+const long long mod=1000000007;                    // 2971215073, 1000050131, 433494437 (some random prime numbers)
 
 #define endl "\n"
 // #define int ll
@@ -40,7 +40,7 @@ bool comp(ll a,ll b){
 ll n,k,tt=1;
 void solve(){
     //string s,t;
-    // ll m,q,x,y,ans=0;
+    //ll m,q,x,y,ans=0;
     cin>>n; 
     std::vector<ll> ar(n);
     input(ar,n);

@@ -1,6 +1,6 @@
 # Competitive Programming and DSA
 
-I intend to gather all the info and techniques that one comes across as a competitive programmer.
+I intend to gather all the info and techniques that one comes across as a competitive programmer.<br>
 This repository also contains all of my templates/snippets.
 Any suggestions and comments are welcome.
 

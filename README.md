@@ -1,6 +1,7 @@
-# Data-Structures-and-Algorithms And CP
+# Competitive Programming and DSA
 
-This repository contains all of my competitive programming templates.
+I intend to gather all the info and techniques that one comes across as a competitive programmer.
+This repository also contains all of my templates/snippets.
 Any suggestions and comments are welcome.
 
 My Profiles -

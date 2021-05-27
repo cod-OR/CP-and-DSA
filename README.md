@@ -1,7 +1,14 @@
-# Data-Structures-and-Algorithms And CP
+# Competitive Programming and DSA
 
-Hi,
-I started my Competitive programming journey in January 2020. 
-Since then I have come across many methods and algorithms as well as some time-saving-techniques.
-I intend to gather as much of them as possible in this repository for my use and, of course, for the community.
-All contributions and comments are welcome.
+I intend to gather all the info and techniques that one comes across as a competitive programmer.<br>
+This repository also contains all of my templates/snippets.
+Any suggestions and comments are welcome.
+
+My Profiles -
+<br>
+Codeforces- https://codeforces.com/profile/codOR_221B  <br>
+Codechef- https://www.codechef.com/users/ronkar   <br>
+Spoj- https://www.spoj.com/users/coderat/   <br>
+Atcoder- https://atcoder.jp/users/cod_OR     <br>
+Leetcode- https://leetcode.com/code_OR/    <br>
+Hackerrank- https://www.hackerrank.com/code_OR   <br>

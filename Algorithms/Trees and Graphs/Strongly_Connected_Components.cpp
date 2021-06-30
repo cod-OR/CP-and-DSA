@@ -41,42 +41,44 @@ ll n,k,tt=1;
 vector<vector<int> > scc;       // stores Strongly Connected Components
 vector<int> adj[A], adjr[A];
 
-void dfs(int x, vector<int> &visisited,stack<int> &st){
+void dfs(int x, vector<int> &visited,stack<int> &st){
     for(auto it:adj[x]){
-        if(!visisited[it]){
-            visisited[it]=1;
-            dfs(it,visisited,st);
+        if(!visited[it]){
+            visited[it]=1;
+            dfs(it,visited,st);
         }
     }
     st.push(x);
 }
 
-void dfsr(int x, vector<int> &visisited){
+void dfsr(int x, vector<int> &visited){
     for(auto it:adjr[x]){
-        if(!visisited[it]){
-            visisited[it]=1;
+        if(!visited[it]){
+            visited[it]=1;
             scc.back().pb(it);
-            dfsr(it, visisited);
+            dfsr(it, visited);
         }
     }
 }
 void kosaraju(){
-    vector<int> visisited(n+1);
+    vector<int> visited(n+1);
     stack<int> st;
-    visisited[1]=1;
+    
     for(int i=1;i<=n;i++){
-        if(!visisited[i])    
-            dfs(i, visisited, st);
+        if(!visited[i]){    
+            visited[i]=1;
+            dfs(i, visited, st);
+        }
     }
     for(int i=0;i<=n;i++){
-        visisited[i]=0;
+        visited[i]=0;
     }
 
     while(!st.empty()){
-        if(!visisited[st.top()]){
-            visisited[st.top()]=1;
+        if(!visited[st.top()]){
+            visited[st.top()]=1;
             scc.pb({st.top()});
-            dfsr(st.top(), visisited);        // dfs for reversed list
+            dfsr(st.top(), visited);        // dfs for reversed list
         }
         st.pop();
     }

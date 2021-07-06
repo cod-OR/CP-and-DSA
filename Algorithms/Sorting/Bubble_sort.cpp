@@ -34,4 +34,6 @@ int main(){
         cout<<arr[id]<<" ";
     }
     cout<<endl;
+    
+    return 0;
 }

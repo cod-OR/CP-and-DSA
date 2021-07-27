@@ -50,7 +50,7 @@ int KMP(string &text, string &patt, int n){
 
 	while(i<text.size()){
 		if(text[i]==patt[j]){
-			j++;i++;
+			j++;
 			if(j==n){
 				// cout<<"found at "<<i-n+1<<endl;
 				cnt++;
@@ -60,6 +60,8 @@ int KMP(string &text, string &patt, int n){
 		else{
 			if(j!=0)j=lps[j-1];
 		}
+		
+		i++;
 	}
 	return cnt;
 }

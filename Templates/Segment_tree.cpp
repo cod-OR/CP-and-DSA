@@ -1,12 +1,11 @@
+
 struct node {
-    // ll lazy=0;
-    // ll min=0;
+    ll lazy=0;
     ll sum=0;
 };
 vector<node> tree;
 // global tree, make sure you clear it, if tc are there
 // zero indexed, [0,n)
-
 void build(ll l, ll r, ll x){
     ll m,lc,rc;
     m=(l+r)/2;
@@ -58,3 +57,4 @@ ll query(ll l, ll r, ll x, ll L , ll R){
 
     return b; // this too
 }
+

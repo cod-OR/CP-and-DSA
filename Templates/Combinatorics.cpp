@@ -7,10 +7,10 @@ ll power(ll a, ll b){
     }
     return res;
 }
-std::vector<ll> fac(1000005),inv(1000005);
+std::vector<ll> fac(N),inv(N);
 void pre(){
     fac[0] = 1; inv[0] = 1;
-    for (int i = 1;i < 1000003;i++){
+    for (int i = 1;i < N;i++){
         fac[i] = fac[i - 1] * i;fac[i] %= mod;
         inv[i] = power(fac[i] , mod - 2);
     }

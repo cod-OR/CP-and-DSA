@@ -18,7 +18,7 @@ void bubble_sort(vector<int> &arr, int n){
 }
 
 int main(){
-    // freopen("input.txt", "r", stdin);
+    
     int n;
     cin>>n;
     vector<int> arr(n);

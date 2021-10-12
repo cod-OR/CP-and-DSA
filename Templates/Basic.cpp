@@ -47,12 +47,13 @@ ll n,k,tt=1;
 void solve(){
 
     string s,t;
+    // cin>>s;
+    // n= sz(s);
     
     cin>>n;
     vll ar(n);
     cin>>ar;
-    
-    
+
 
 }
            

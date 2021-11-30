@@ -1,6 +1,15 @@
 
 // 85. Maximal Rectangle
 
+// Consider each row, and the column of 1's starting from each cell of the row, - 
+// each such row becomes a "find largest rectangle in histogram" problem
+
+// So, all we need to do is find the heights of columns of 1's, for each cell
+// and send the generated array to rectangle finding function
+
+// The function to find rectangle in histogram, is directly taken from problem 84.
+// Refer it for further clarification
+
 
 class Solution {
     int findmx(vector<int>& h) {
@@ -19,8 +28,11 @@ class Solution {
             }
             st.push(i);
         }
+        
         return ans;
+        
     }
+    
 public:
     int maximalRectangle(vector<vector<char>>& mat) {
         
@@ -36,10 +48,12 @@ public:
                 }
                 else{
                     if(mat[i][j]=='1')
-                    sum[i][j] = sum[i-1][j] + (mat[i][j]-'0');
+                        sum[i][j] = sum[i-1][j] + (mat[i][j]-'0');
+                    
+                    // otherwise, sum[i][j]=0
                 }
             }
-            ans = max(ans, findmx(sum[i]));
+            ans = max(ans, findmx(sum[i]));  // largest rectangle in histogram
         }
         return ans;
     }

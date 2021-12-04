@@ -13,3 +13,9 @@ Atcoder- https://atcoder.jp/users/cod_OR     <br>
 Leetcode- https://leetcode.com/code_OR/    <br>
 StopStalk- https://www.stopstalk.com/user/profile/code_Or   <br>
 Hackerrank- https://www.hackerrank.com/code_OR   <br>
+
+
+Note:
+ Random solution/Leetcode folder contains my solutions to Famous leetcode problems. (Still under progress.) <br>
+ Most of them contains my approach written in comments.
+ 

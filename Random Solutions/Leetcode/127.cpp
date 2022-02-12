@@ -9,7 +9,7 @@
 
 // Every word can have at max 26*10 children
 
-// Time complexity: O((v + 260*V)*10)
+// Time complexity: O(V*260*10)
 
 
 class Solution {

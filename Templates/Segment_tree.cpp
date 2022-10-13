@@ -1,26 +1,26 @@
-vll ar;                
-struct node {
+
+struct tree_node {
     ll lazy=0;
-    ll sum=0;
+    ll val=0;
 };
 class seg_tree{
-    node initNode;
-    node extremNode;
-    vector<node> tree;
+    vector<tree_node> tree;
     ll n;
-    node merge(const node &left, const node &right){
-        // merge the children and return
-        node D;
-        //  D.sum = left.sum+right.sum;
-        return D;
-    }
+    vll ar;
+    tree_node extremNode;
 
-    void build_node(ll arrayIndex, ll treeIndex){
-        // tree[treeIndex].sum = ar[arrayIndex];
-        // for each node
+    tree_node merge(const tree_node &left, const tree_node &right){
+        tree_node res;
+        res.val = left.val + right.val;
+        return res;
     }
-    void update_node(ll arrayIndex, ll treeIndex, ll val){
-        // tree[treeIndex].sum= val ;
+    void build_node(ll arrayIndex, ll treeIndex){
+        // update here. is it really required?
+        tree[treeIndex].val = ar[arrayIndex];
+    }
+    void update_node(ll treeIndex, ll L, ll R, ll val){
+        // index treeIndex corresponds to range [L,R); use val and update.
+        tree[treeIndex].val = val;
     }
 
     void build(ll l, ll r, ll x){
@@ -40,54 +40,69 @@ class seg_tree{
         tree[x] = merge(tree[lc], tree[rc]);
     }
     
-    void update(ll l, ll r, ll x, ll id, ll val){
+    void update(ll l, ll r, ll x, ll L, ll R, ll val){
         ll m,lc,rc;
         m=(l+r)/2;
         lc=2*x+1;
         rc=2*x+2;
+        
         if(r<=l)
             return;
-        if(id<l || id>=r)
+        
+        if(R<=l || L>=r)   // complete outside
             return;
-        if(r-l==1){
-            update_node(l,x,val);
+
+        if(L<=l and r<=R){  // complete inside
+            update_node(x,L,R,val);
             return;
         }
-        update(l,m,lc,id,val);
-        update(m,r,rc,id,val);
-        tree[x] = merge(tree[lc], tree[rc]);
+        update(l,m,lc,L,R,val);
+        update(m,r,rc,L,R,val);
+
+        tree[x].val = merge(tree[lc], tree[rc]).val;  // comment this if not required
+
     }
     
-    node query(ll l, ll r, ll x, ll L , ll R){
+    tree_node query(ll l, ll r, ll x, ll L , ll R){
         ll m,lc,rc;
         m=(l+r)/2;
         lc=2*x+1;
         rc=2*x+2;
-    
         if(R<=l || L>=r)        // complete outside
             return extremNode;
         if(L<=l &&  r<=R)       // complete inside  
             return tree[x];
-        return merge(query(l,m,lc,L,R), query(m,r,rc,L,R));
+        tree_node res = merge(query(l,m,lc,L,R), query(m,r,rc,L,R));
+
+        return res;
     }
+
 public:
+
     seg_tree(ll size){
-        tree = vector<node> (size*4);
+        tree = vector<tree_node> (size*4);
         this-> n = size;
-   
-        // initNode   // for building or update build function
-        // extremNode // for query or update query
+        //extremNode.val = 0;
     }
 
-    void update(ll id, ll val){
-        update(0,this->n,0,id,val);
+    seg_tree(ll size, vll &ar){
+        tree = vector<tree_node> (size*4);
+        this-> n = size;
+        this->ar = ar;
+        //extremNode.val = 0;
     }
 
-    node query(ll L, ll R){
+    void update(ll L, ll R, ll val){
+        update(0,this->n,0,L,R,val);
+    }
+
+    tree_node query(ll L, ll R){
         return query(0,this->n,0,L,R);
     } 
 
     void build(){
        build(0,this->n,0);
     }
+
 };
+

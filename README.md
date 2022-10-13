@@ -16,6 +16,6 @@ Hackerrank- https://www.hackerrank.com/code_OR   <br>
 
 
 Note:
- Random solution/Leetcode folder contains my solutions to famous leetcode problems. (Still under progress.) <br>
+ Random solution/Leetcode folder contains my solutions to famous leetcode problems. <br>
  Most of them contains my approach written in comments.
  

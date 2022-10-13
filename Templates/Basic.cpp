@@ -1,5 +1,3 @@
-
-
                         //    I solemnly swear that I am upto no good //
 
 #include <bits/stdc++.h>
@@ -24,6 +22,16 @@ using namespace std;
 #define NN              cout<<"No"<<endl
 #define ppc             __builtin_popcount
 #define ppcll           __builtin_popcountll
+#define jao(x)          cout<<x<<endl             
+// g++ -std=c++17 A.cpp
+// ./a.out < input.txt 
+// ./a.out < input.txt > output.txt
+// #include <ext/pb_ds/assoc_container.hpp>
+// #include <ext/pb_ds/tree_policy.hpp>
+// using namespace __gnu_pbds;
+// #define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update>
+
+// order_of_key and find_by_order
 
 const long long INF=1e18;
 const long long N=200005;
@@ -36,6 +44,7 @@ typedef pair<ll,ll> pairll;
 typedef map<ll,ll>  mapll;
 typedef map<char,ll> mapch;
 typedef vector<ll> vll;
+typedef vector<vll> vvll;
 mt19937_64 rng(std::chrono::steady_clock::now().time_since_epoch().count());
 helpUs class comp{public:bool operator()(T a, U b){return a>b;}};
 helpUs istream& operator>>(istream& aa, pair<T,U> &p){aa>>p.ff>>p.ss;return aa;}
@@ -47,13 +56,13 @@ ll n,k,tt=1;
 void solve(){
 
     string s,t;
-    // cin>>s;
-    // n= sz(s);
     
     cin>>n;
+    // n=s.size();
     vll ar(n);
     cin>>ar;
-
+    
+    
 
 }
            
